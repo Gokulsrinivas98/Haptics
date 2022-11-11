@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indexing>
+ <paragraph index="6" node_type="writer">Gokul Srinivasan		                   500594698</paragraph>
+ <object alt="" name="Image1" object_type="graphic"/>
+ <paragraph index="15" node_type="writer">RBE 595 - Haptic and Robotic Interact</paragraph>
+ <paragraph index="16" node_type="writer"> Project Report</paragraph>
+ <paragraph index="18" node_type="writer">Topic: Bounding Volume Hierarchy based Collision detection in two dimensions.</paragraph>
+ <paragraph index="20" node_type="writer">Description:</paragraph>
+ <paragraph index="21" node_type="writer">The project aims to find if two polygons are colliding with each other using Bounding Volume Hierarchy. The polygons are two dimensional and the entire calculation is done on x and y axes. </paragraph>
+ <paragraph index="23" node_type="writer">Following Assumptions are considered:</paragraph>
+ <paragraph index="24" node_type="writer">The bounding volumes are hard coded. </paragraph>
+ <paragraph index="25" node_type="writer">The vertices of the polygons are also hard coded. </paragraph>
+ <paragraph index="27" node_type="writer">Description of the objects, data structures, and algorithms used. </paragraph>
+ <paragraph index="28" node_type="writer">Polygon Generation:</paragraph>
+ <paragraph index="29" node_type="writer">The vertices of the polygons are user provided. These coordinates are then used by pygame to draw the polygons. This is done in an infinite loop block, that keeps constantly checking for a keyboard input. When the keyboard inputs UP,DOWN, LEFT and RIGHT happen, the calls are used to store the changes in coordinates of the second polygon. These change in coordinate list then used to update the coordinates in the root of the second polygon’s binary tree.</paragraph>
+ <paragraph index="31" node_type="writer">Bounding Volume Hierarchy: </paragraph>
+ <paragraph index="32" node_type="writer">Since the bounding volumes are hard coded, the bounding volume hierarchy is manually created with the top left and bottom right coordinates of individual bounding volumes. A 3 level bounding volume hierarchy was created for the blue polygon and a two level bounding volume hierarchy was created for the red polygon. </paragraph>
+ <paragraph index="34" node_type="writer">Bounding Volume Test Tree:</paragraph>
+ <paragraph index="35" node_type="writer">Running time simultaneous recursive traversal of the two BVHs results in a bounding volume test tree. The tree obtained is as follows. The tree is then traversed in a Depth First Search method to find the colliding leaf nodes.</paragraph>
+ <paragraph index="55" node_type="writer">Collision Check:</paragraph>
+ <paragraph index="56" node_type="writer">A simple function that checks if two rectangles are overlapping each other. If they are then it will return True. Else False. Here the two rectangles are the bounding boxes of the polygons, say D and Y. </paragraph>
+ <paragraph index="58" node_type="writer">Simulation Setup:</paragraph>
+ <paragraph index="59" node_type="writer">Python3 is used for the processes. </paragraph>
+ <paragraph index="60" node_type="writer">Pygame is used for the visualization.</paragraph>
+ <paragraph index="63" node_type="writer">How to run the program: </paragraph>
+ <paragraph index="64" node_type="writer">Using Terminal:  Execute the following command. ~$ python3 Gsrinivasan.py </paragraph>
+ <paragraph index="66" node_type="writer">Using VSCode: Open the code and hit F5.</paragraph>
+ <paragraph index="68" node_type="writer">-Description of experiments/simulation; display of examples (with input) and results; discussion of results.</paragraph>
+ <paragraph index="69" node_type="writer">The polygons used for the experiment:</paragraph>
+ <paragraph index="72" node_type="writer">The bounding boxes of the objects are generated ass follows:</paragraph>
+ <paragraph index="78" node_type="writer">The above image shows the 1st level of the bounding boxes and shows the nodes A (bounding box over blue) and node X (bounding box over red).</paragraph>
+ <paragraph index="81" node_type="writer">The left part of the blue polygon is the B node, and the right part the C node. These two can be further divided into nodes D(top left), E (bottom left), F (top right) and G (bottom right). </paragraph>
+ <paragraph index="83" node_type="writer">For the red polygon, the bounding box X is divided into Y (left portion) and Z (right portion).</paragraph>
+ <paragraph index="93" node_type="writer">The above image gives the output of all the nodes that are in collision with the red polygon. From the figure we can see that the red polygon is in collision with the G node of the blue polygon. This G node is a child node of Node C, which is in turn a child node of Node A. The same is displayed on the terminal. </paragraph>
+ <paragraph index="95" node_type="writer">Since this collision check is done for every simulation step, the output is repeated until the program is closed or the red polygon is moved away. </paragraph>
+ <paragraph index="97" node_type="writer">Discussion of problems/limitations and future improvement:</paragraph>
+ <paragraph index="98" node_type="writer">The program utilized hard coded values to plot the polygons. The polygons could have been generated randomly.</paragraph>
+ <paragraph index="99" node_type="writer">The algorithm was developed around simple polygons. This could be extended to more complex polygons as well as in 3D.</paragraph>
+ <paragraph index="100" node_type="writer">The bounding volumes used for the calculation are also hard coded. This could be automated.</paragraph>
+ <paragraph index="102" node_type="writer">References: </paragraph>
+ <paragraph index="104" node_type="writer">“Wang, X., Tang, M., Manocha, D., &amp; Tong, R. (2018, May). Efficient BVH‐based collision detection scheme with ordering and restructuring. In Computer Graphics Forum (Vol. 37, No. 2, pp. 227-237).”</paragraph>
+ <object name="Image with transparency 1" alt="" object_type="shape" description=""/>
+ <object name="Group object 1" alt="" object_type="shape" description=""/>
+ <object name="Image with transparency 3" alt="" object_type="shape" description=""/>
+ <object name="Image 1" alt="" object_type="shape" description=""/>
+</indexing>

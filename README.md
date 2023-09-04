@@ -30,7 +30,7 @@ created for the blue polygon and a two level bounding volume hierarchy was creat
 <details>
 <summary>:eyes: Show Details</summary>
 Running time simultaneous recursive traversal of the two BVHs results in a bounding volume test tree. The tree
-obtained is as follows. The tree is then traversed in a Depth First Search method to find the colliding leaf nodes
+obtained is as follows. The tree is then traversed in a Depth First Search method to find the colliding leaf nodes.
 </details>
 
 ### Collision Check:
